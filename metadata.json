@@ -1,0 +1,8 @@
+{
+  "name": "Smart Timetable AI Generator",
+  "description": "Production-grade college timetable optimizer using Genetic Algorithms, conflict detection, and an AI-powered assistant.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": []
+}

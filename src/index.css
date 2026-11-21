@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-primary: #4f46e5; /* indigo-600 */
+  --color-primary-hover: #4338ca; /* indigo-700 */
+  --color-primary-light: #eef2ff; /* indigo-50 */
+  
+  --color-surface: #ffffff;
+  --color-background: #f8fafc; /* slate-50 */
+  --color-border: #e2e8f0; /* slate-200 */
+  
+  --color-text-main: #0f172a; /* slate-900 */
+  --color-text-muted: #64748b; /* slate-500 */
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-background text-text-main;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white rounded-md px-4 py-2 font-semibold hover:bg-primary-hover transition shadow-sm;
+  }
+  
+  .btn-secondary {
+    @apply bg-white border border-border text-text-main rounded-md px-4 py-2 font-medium hover:bg-background transition;
+  }
+
+  .card-premium {
+    @apply bg-surface border border-border rounded-xl shadow-sm overflow-hidden;
+  }
+  
+  .badge-admin {
+    @apply text-xs font-semibold px-2 py-1 bg-primary-light text-primary rounded;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full hover:bg-text-muted;
+}
